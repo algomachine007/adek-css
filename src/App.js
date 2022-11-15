@@ -1,12 +1,10 @@
 import Header from './components/Header/Header';
-
+import styles from './layout.module.scss';
 function App() {
   return (
-    <div className='App'>
-      <header className='App-header'>
-        <Header />
-      </header>
-    </div>
+    <header className={styles.layout}>
+      <Header />
+    </header>
   );
 }
 
