@@ -1,3 +1,39 @@
 .wrapper {
   display: flex;
+
+  ul {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    list-style-type: none;
+    font-size: 14px;
+    font-weight: 600;
+    li {
+      margin: 0 30px;
+    }
+  }
+}
+
+.topNav {
+  display: flex;
+  justify-content: flex-end;
+  margin: 30px 0;
+
+  li:first-child {
+    margin: 0 20px;
+  }
+}
+
+.button {
+  border: 1px solid #781a25;
+  color: #781a25;
+  padding: 0.5px 45px;
+  background-color: white;
+  cursor: pointer;
+  font-weight: 600;
+
+  &:hover {
+    background: #781a25;
+    color: white;
+  }
 }

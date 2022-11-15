@@ -1,0 +1,23 @@
+// creating a design system that ensures that any change here should affect the whole system/project
+
+$white: #fff;
+$blue-primary: #032849;
+$opacity-primary: rgba(19, 129, 215, 0.12);
+
+// box shadows
+$card-shadow: -10px 10px 24px rgba(255, 255, 255, 0.2);
+
+$banner-shadow: -10px 10px 20px rgba(255, 255, 255, 0.1);
+
+//media queries
+
+$xsmall-and-up: "screen and (min-width : 600px)";
+$tablet-and-up: "screen and (min-width : 768px)";
+$md-tablet-and-up: "screen and (min-width : 1200px)";
+$lg-tablet-and-up: "screen and (min-width : 1300px)";
+
+// fonts
+$main-font: "Poppins", sans-serif;
+
+// letter spacing
+$letter-spacing: -1.5px;
