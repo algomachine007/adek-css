@@ -8,11 +8,16 @@ const Header = () => {
     <div>
       <ul className={styles.topNav}>
         <li>
-          <span>1 (800) 431-2335 </span>
+          <span>
+            <IconComponent name='phone' />
+            <a href='tel:1(800)431-2335'> 1 (800) 431-2335</a>
+          </span>
         </li>
-
         <li>
-          IMG <span>1 (800) 431-2335 </span>
+          <span>
+            <IconComponent name='mail' />{' '}
+            <a href='mailto:sales@adek'>sales@adek</a>
+          </span>
         </li>
       </ul>
       <nav className={styles.wrapper}>
@@ -21,7 +26,6 @@ const Header = () => {
           <li>
             <span>
               <p> Services </p>
-
               <IconComponent name='chevron' />
             </span>
           </li>{' '}
