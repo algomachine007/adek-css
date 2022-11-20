@@ -1,7 +1,8 @@
 import React from 'react';
-import Chevron from './chevron/Chevron';
+import IconComponent from '../../Icons';
+
 import styles from './header.module.scss';
-import Logo from './logo/Logo';
+
 const Header = () => {
   return (
     <div>
@@ -15,16 +16,36 @@ const Header = () => {
         </li>
       </ul>
       <nav className={styles.wrapper}>
-        <Logo />
-
+        <IconComponent name='logo' />
         <ul>
-          <li>Services</li>
-          <li>Products</li>
-          <li>Markets</li>
-          <li>Support</li>
           <li>
-            Company
-            <Chevron />
+            <span>
+              <p> Services </p>
+
+              <IconComponent name='chevron' />
+            </span>
+          </li>{' '}
+          <li>
+            <span>
+              <p> Products </p>
+              <IconComponent name='chevron' />
+            </span>
+          </li>{' '}
+          <li>
+            <span>
+              <p> Markets </p>
+            </span>
+          </li>{' '}
+          <li>
+            <span>
+              <p> Support </p>
+            </span>
+          </li>
+          <li>
+            <span>
+              <p> Company </p>
+              <IconComponent name='chevron' />
+            </span>
           </li>
         </ul>
 

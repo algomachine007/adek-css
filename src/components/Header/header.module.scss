@@ -10,6 +10,12 @@
     font-weight: 600;
     li {
       margin: 0 30px;
+      span {
+        p {
+          display: inline-flex;
+          margin-right: 4px;
+        }
+      }
     }
   }
 }
