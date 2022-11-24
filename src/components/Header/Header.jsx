@@ -1,6 +1,7 @@
 import React from 'react';
-import { contactHeader } from '../../data';
+import { contactHeader, headerLinks } from '../../data';
 import IconComponent from '../../Icons';
+import Dropdown from '../Dropdown/Dropdown';
 
 import styles from './header.module.scss';
 
@@ -20,52 +21,24 @@ const Header = () => {
       <nav className={styles.wrapper}>
         <IconComponent name='logo' />
         <ul>
-          <li>
-            <span>
-              <p> Services </p>
-              <IconComponent name='chevron' />
-            </span>
-          </li>
+          {headerLinks.map(({ title, icon, subLinks }, index) => (
+            <li>
+              <span>
+                <p> {title} </p>
+                <IconComponent name={icon} />
+              </span>
+              {subLinks &&
+                subLinks.map(({ title, href }, index) => (
+                  <Dropdown link={title} url={href} />
+                ))}
+            </li>
+          ))}
           <li>
             <span>
               <p> Products </p>
               <IconComponent name='chevron' />
             </span>
-            <div className={styles.dropdown}>
-              <ul>
-                <li>
-                  <a href='#'>
-                    Link 1Link 1Link 1Link 1Link 1Link 1Link 1Link 1Link 1Link
-                    1Link 1Link 1Link 1Link 1Link 1
-                  </a>
-                </li>
-                <li>
-                  <a href='#'>Link 1</a>
-                </li>{' '}
-                <li>
-                  <a href='#'>Link 1</a>
-                </li>{' '}
-                <li>
-                  <a href='#'>Link 1</a>
-                </li>
-              </ul>
-            </div>
-          </li>{' '}
-          <li>
-            <span>
-              <p> Markets </p>
-            </span>
-          </li>{' '}
-          <li>
-            <span>
-              <p> Support </p>
-            </span>
-          </li>
-          <li>
-            <span>
-              <p> Company </p>
-              <IconComponent name='chevron' />
-            </span>
+            <Dropdown />
           </li>
         </ul>
 

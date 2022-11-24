@@ -3,13 +3,13 @@ export const headerLinks = [
     title: 'Services',
     icon: 'chevron',
     url: '/',
-    links: [{ title: 'Home', href: '/' }],
+    subLinks: [{ title: 'Home', href: '/' }],
   },
   {
     title: 'Products',
     icon: 'chevron',
     url: '/',
-    links: [{ title: 'Home', href: '/' }],
+    subLinks: [{ title: 'Home', href: '/' }],
   },
   {
     title: 'Markets',
@@ -23,7 +23,7 @@ export const headerLinks = [
     title: 'Company',
     icon: 'chevron',
     url: '/',
-    links: [{ title: 'Home', href: '/' }],
+    subLinks: [{ title: 'Home', href: '/' }],
   },
 ];
 
