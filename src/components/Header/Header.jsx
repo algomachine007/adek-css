@@ -25,7 +25,7 @@ const Header = () => {
               <p> Services </p>
               <IconComponent name='chevron' />
             </span>
-          </li>{' '}
+          </li>
           <li>
             <span>
               <p> Products </p>

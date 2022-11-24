@@ -1,9 +1,30 @@
 export const headerLinks = [
-  { title: 'Services', url: '/', links: [{ title: 'Home', href: '/' }] },
-  { title: 'Products', url: '/', links: [{ title: 'Home', href: '/' }] },
-  { title: 'Markets', url: '/', links: [{ title: 'Home', href: '/' }] },
-  { title: 'Support', url: '/', links: [{ title: 'Home', href: '/' }] },
-  { title: 'Company', url: '/', links: [{ title: 'Home', href: '/' }] },
+  {
+    title: 'Services',
+    icon: 'chevron',
+    url: '/',
+    links: [{ title: 'Home', href: '/' }],
+  },
+  {
+    title: 'Products',
+    icon: 'chevron',
+    url: '/',
+    links: [{ title: 'Home', href: '/' }],
+  },
+  {
+    title: 'Markets',
+    url: '/',
+  },
+  {
+    title: 'Support',
+    url: '/',
+  },
+  {
+    title: 'Company',
+    icon: 'chevron',
+    url: '/',
+    links: [{ title: 'Home', href: '/' }],
+  },
 ];
 
 export const buttonHeader = { title: 'Contact Us', url: '/' };
