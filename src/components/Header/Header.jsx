@@ -31,6 +31,25 @@ const Header = () => {
               <p> Products </p>
               <IconComponent name='chevron' />
             </span>
+            <div className={styles.dropdown}>
+              <ul>
+                <li>
+                  <a href='#'>
+                    Link 1Link 1Link 1Link 1Link 1Link 1Link 1Link 1Link 1Link
+                    1Link 1Link 1Link 1Link 1Link 1
+                  </a>
+                </li>
+                <li>
+                  <a href='#'>Link 1</a>
+                </li>{' '}
+                <li>
+                  <a href='#'>Link 1</a>
+                </li>{' '}
+                <li>
+                  <a href='#'>Link 1</a>
+                </li>
+              </ul>
+            </div>
           </li>{' '}
           <li>
             <span>

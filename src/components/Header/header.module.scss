@@ -8,13 +8,59 @@
     list-style-type: none;
     font-size: 14px;
     font-weight: 600;
+
     li {
       margin: 0 30px;
+      position: relative;
       span {
         p {
           display: inline-flex;
           margin-right: 4px;
+
+          &:hover {
+            cursor: pointer;
+            color: #a12734;
+          }
         }
+      }
+
+      &:hover {
+        .dropdown {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+
+    li {
+      padding: 20px 10px;
+      width: 100%;
+      transition: 0.3s ease-in-out;
+
+      &:hover {
+        cursor: pointer;
+        background-color: rgb(193, 193, 193);
+
+        a {
+          color: #781a25;
+        }
+      }
+
+      a {
+        word-break: break-all;
       }
     }
   }
