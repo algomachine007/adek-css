@@ -1,4 +1,5 @@
 import React from 'react';
+import { contactHeader } from '../../data';
 import IconComponent from '../../Icons';
 
 import styles from './header.module.scss';
@@ -7,18 +8,14 @@ const Header = () => {
   return (
     <div>
       <ul className={styles.topNav}>
-        <li>
-          <span>
-            <IconComponent name='phone' />
-            <a href='tel:1(800)431-2335'> 1 (800) 431-2335</a>
-          </span>
-        </li>
-        <li>
-          <span>
-            <IconComponent name='mail' />{' '}
-            <a href='mailto:sales@adek'>sales@adek</a>
-          </span>
-        </li>
+        {contactHeader.map(({ title, icon }, index) => (
+          <li key={`contact-${index}`}>
+            <span>
+              <IconComponent name={icon} />
+              <a href={`tel:${title}`}>{title}</a>
+            </span>
+          </li>
+        ))}
       </ul>
       <nav className={styles.wrapper}>
         <IconComponent name='logo' />
