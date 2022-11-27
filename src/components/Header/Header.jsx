@@ -1,11 +1,15 @@
-import React from 'react';
-import { contactHeader, headerLinks } from '../../data';
+import React, { useState } from 'react';
+import { buttonHeader, contactHeader, headerLinks } from '../../data';
 import IconComponent from '../../Icons';
 import Dropdown from '../Dropdown/Dropdown';
+import { Hamburger } from '../HeaderElements/Hamburger/Hamburger';
 
 import styles from './header.module.scss';
 
 const Header = () => {
+  const [menu, setMenu] = useState(false);
+
+  const handleMenuToggle = () => setMenu((p) => !p);
   return (
     <div>
       <ul className={styles.topNav}>
@@ -22,7 +26,7 @@ const Header = () => {
         <IconComponent name='logo' />
         <ul>
           {headerLinks.map(({ title, icon, subLinks }, index) => (
-            <li>
+            <li key={`li-${index}`}>
               <span>
                 <p> {title} </p>
                 <IconComponent name={icon} />
@@ -36,7 +40,12 @@ const Header = () => {
           ))}
         </ul>
 
-        <button className={styles.button}>Contact Us</button>
+        <button className={styles.button}>{buttonHeader.title}</button>
+
+        <Hamburger
+          hamburgerMenuToogle={menu}
+          hamburgerToggler={handleMenuToggle}
+        />
       </nav>
     </div>
   );
