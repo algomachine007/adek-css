@@ -1,23 +1,19 @@
+@use "./../../../styles/config/variables" as variable;
+
 .button {
+  /* box-model */
   display: block;
   padding: 0;
+  margin-top: 10px;
+
+  /* display and visibility */
   background-color: transparent;
   border: none;
-  // width: 100%;
-  margin-top: 10px;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-  // padding-left: 85vw;
-
-  // @media (--sm) {
-  //   padding-left: 90vw;
-  // }
-
-  // @media (--lg) {
-  //   display: none;
-  // }
 }
 
 .icon {
-  fill: var(--bg-dark-green);
+  /* display and visibility */
+  fill: variable.$wine-primary;
 }

@@ -1,7 +1,9 @@
 .layout {
+  /* box-model */
   padding: 5px 20px;
 
   @media screen and (min-width: 1200px) {
+    /* box-model */
     padding: 10px 90px;
   }
 }

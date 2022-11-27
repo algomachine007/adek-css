@@ -1,17 +1,18 @@
 import React, { useState } from 'react';
-import { buttonHeader, contactHeader, headerLinks } from '../../data';
+
 import IconComponent from '../../Icons';
-import Dropdown from '../Dropdown/Dropdown';
+import Dropdown from '../HeaderElements/Dropdown/Dropdown';
 import { Hamburger } from '../HeaderElements/Hamburger/Hamburger';
 
 import styles from './header.module.scss';
 
-const Header = () => {
+const Header = ({ buttonHeader, contactHeader, headerLinks }) => {
   const [menu, setMenu] = useState(false);
 
   const handleMenuToggle = () => setMenu((p) => !p);
+
   return (
-    <div>
+    <>
       <ul className={styles.topNav}>
         {contactHeader.map(({ title, icon }, index) => (
           <li key={`contact-${index}`}>
@@ -43,17 +44,24 @@ const Header = () => {
         <button className={styles.button}>{buttonHeader.title}</button>
 
         <div className={styles.hamburger}>
-           <Hamburger
-          hamburgerMenuToogle={menu}
-          hamburgerToggler={handleMenuToggle}
-        />
+          <Hamburger
+            hamburgerMenuToogle={menu}
+            hamburgerToggler={handleMenuToggle}
+          />
         </div>
-       
       </nav>
 
-     
-      {menu && <nav >do stuff</nav>}
-    </div>
+      {menu && (
+        <nav className={styles.navOpen}>
+          <ul>
+            <li>One</li>
+            <li>One</li>
+            <li>One</li>
+            <li>One</li>
+          </ul>
+        </nav>
+      )}
+    </>
   );
 };
 

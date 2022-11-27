@@ -1,20 +1,11 @@
 @use "./variables" as variable;
 
-@mixin center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-@mixin colFlex {
-  display: flex;
-  flex-direction: column;
-}
-
-@mixin btnText {
-  font-family: "Poppins", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 22px;
+@mixin headerBtn {
+  border: 1px solid variable.$wine-primary;
+  color: variable.$wine-primary;
+  padding: 0.5px 25px;
+  background-color: variable.$white;
+  cursor: pointer;
+  font-weight: 600;
+  margin: 0 auto;
 }

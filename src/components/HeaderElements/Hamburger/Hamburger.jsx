@@ -32,20 +32,20 @@ function HamburgerIcon({ height = '40', width = '40', type, className }) {
           <path
             d='M2,36.5068L37,1.99979'
             fill='none'
-            stroke='#1b5722'
+            stroke='#781a25'
             strokeWidth='4'
           />
           <path
             d='M2,36.5068L37,1.99979'
             fill='none'
-            stroke='#1b5722'
+            stroke='#781a25'
             strokeWidth='4'
           />
           <path
             d='M2,36.5068L37,1.99979'
             transform='matrix(-1 0 0 1 39 0)'
             fill='none'
-            stroke='#1b5722'
+            stroke='#781a25'
             strokeWidth='4'
           />
         </svg>

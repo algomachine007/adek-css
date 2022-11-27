@@ -1,42 +1,64 @@
+@use "./../../styles/config/variables" as variable;
+@use "./../../styles/config/mixins" as mixin;
+
 .wrapper {
+  /* display and visibility */
   display: flex;
+
+  /* box-model */
   margin: 30px 0;
-  @media screen and (min-width: 600px) {
+
+  @media #{variable.$xsmall-and-up} {
+    /* box-model */
     margin: 0;
   }
 
   ul {
-    display: flex;
+    /* display and visibility */
+    display: none;
     align-items: center;
+
+    /* box-model */
     margin: 0 auto;
     list-style-type: none;
+
+    /* typography */
     font-weight: 600;
-    display: none;
-    @media screen and (min-width: 1200px) {
+
+    @media #{variable.$md-tablet-and-up} {
+      /* display and visibility */
       display: flex;
     }
 
     li {
+      /* box-model */
       margin: 0 15px;
+
+      /* position and layout */
       position: relative;
-      @media screen and (min-width: 1200px) {
+      @media #{variable.$md-tablet-and-up} {
+        /* box-model */
         margin: 0 30px;
       }
       span {
         p {
+          /* display and visibility */
           display: inline-flex;
+
+          /* box-model */
           margin-right: 8px;
           margin-bottom: 15px;
 
           &:hover {
             cursor: pointer;
-            color: #a12734;
+            color: variable.$wine-secondary;
           }
         }
       }
 
       &:hover {
         .dropdown {
+          /* box-model */
           display: block;
         }
       }
@@ -45,66 +67,86 @@
 }
 
 .topNav {
+  /* display and visibility */
   display: none;
   justify-content: flex-end;
+
+  /* box-model */
   margin: 30px 0;
 
   li {
     span {
+      /* display and visibility */
       display: flex;
       align-items: center;
 
       a {
+        /* typography */
         text-decoration: none;
-        color: black;
+        color: variable.$black-primary;
       }
 
       img {
+        /* box-model */
         margin-right: 18px;
       }
     }
   }
 
   li:first-child {
+    /* box-model */
     margin: 0 35px;
   }
 
-  @media screen and (min-width: 600px) {
+  @media #{variable.$xsmall-and-up} {
+    /* display and visibility */
     display: flex;
   }
 }
 
 .dropdown {
-  display: none;
-  position: absolute;
-  background-color: #f7f7f7;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
+  /* box-model */
   min-width: 170px;
+
+  /* display and visibility */
+  display: none;
+  background-color: variable.$white-secondary;
+  box-shadow: variable.$dropdown-shadow;
+  z-index: 1;
   border-radius: 5px;
 
+  /* position and layout */
+  position: absolute;
+
   ul {
+    /* display and visibility */
     display: flex;
     flex-direction: column;
 
     li {
-      padding: 25px 20px;
+      /* box-model */
       width: 100%;
+      padding: 25px 20px;
+
+      /* display and visibility */
       transition: 0.3s ease-in-out;
 
       a {
+        /* typography */
         list-style: none;
         text-decoration: none;
-        color: black;
+        color: variable.$black-primary;
       }
 
       &:hover {
+        /* display and visibility */
         cursor: pointer;
         background-color: rgb(220, 220, 220);
 
         // do something with the a element when li is hovered
         a {
-          color: #781a25;
+          /* display and visibility */
+          color: variable.$wine-primary;
         }
       }
 
@@ -116,40 +158,76 @@
 }
 
 .button {
-  border: 1px solid #781a25;
-  color: #781a25;
-  padding: 0.5px 25px;
-  background-color: white;
-  cursor: pointer;
-  font-weight: 600;
-  margin: 0 auto;
+  /* display and visibility */
+  @include mixin.headerBtn;
 
   @media screen and (min-width: 368px) {
+    /* box-model */
     padding: 0.5px 45px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media #{variable.$md-tablet-and-up} {
     margin: 0;
   }
 
   &:hover {
-    background: #781a25;
-    color: white;
+    /* display and visibility */
+    background: variable.$wine-primary;
+    color: variable.$white;
+  }
+}
+
+.hamburger {
+  /* display and visibility */
+  display: block;
+
+  @media #{variable.$md-tablet-and-up} {
+    /* display and visibility */
+    display: none;
   }
 }
 
 // hamburger menu
 .navOpen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100;
-}
+  /* display and visibility */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
-.hamburger {
-  display: block;
+  background: variable.$wine-primary;
+  /* box-model */
+  margin: 20px auto;
 
-  @media screen and (min-width: 1200px) {
+  @media #{variable.$md-tablet-and-up} {
+    /* display and visibility */
     display: none;
+  }
+
+  /* position and layout */
+  ul {
+    /* display and visibility */
+    width: 100%;
+
+    li {
+      /* box-model */
+      padding: 25px;
+
+      /* display and visibility */
+      cursor: pointer;
+
+      border: 1px solid variable.$white-secondary;
+
+      /*  typography */
+      text-align: center;
+      font-size: 20px;
+      font-weight: 700;
+      color: variable.$white;
+
+      :hover {
+        color: variable.$wine-secondary;
+        text-decoration: dotted;
+      }
+    }
   }
 }

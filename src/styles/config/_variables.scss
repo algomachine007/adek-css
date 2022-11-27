@@ -1,20 +1,19 @@
-// creating a design system that ensures that any change here should affect the whole system/project
-
+// colors
+$black-primary: #000;
 $white: #fff;
-$blue-primary: #032849;
+$white-secondary: #f7f7f7;
+
+$wine-primary: #781a25;
+$wine-secondary: #a12734;
 $opacity-primary: rgba(19, 129, 215, 0.12);
 
 // box shadows
-$card-shadow: -10px 10px 24px rgba(255, 255, 255, 0.2);
-
-$banner-shadow: -10px 10px 20px rgba(255, 255, 255, 0.1);
+$dropdown-shadow: 0px 8px 16px 0px rgba(118, 32, 32, 0.2);
 
 //media queries
-
 $xsmall-and-up: "screen and (min-width : 600px)";
 $tablet-and-up: "screen and (min-width : 768px)";
 $md-tablet-and-up: "screen and (min-width : 1200px)";
-$lg-tablet-and-up: "screen and (min-width : 1300px)";
 
 // fonts
 $main-font: "Poppins", sans-serif;
