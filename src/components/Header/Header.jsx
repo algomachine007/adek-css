@@ -42,11 +42,17 @@ const Header = () => {
 
         <button className={styles.button}>{buttonHeader.title}</button>
 
-        <Hamburger
+        <div className={styles.hamburger}>
+           <Hamburger
           hamburgerMenuToogle={menu}
           hamburgerToggler={handleMenuToggle}
         />
+        </div>
+       
       </nav>
+
+     
+      {menu && <nav >do stuff</nav>}
     </div>
   );
 };

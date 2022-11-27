@@ -1,12 +1,11 @@
 import Header from './components/Header/Header';
-
-import styles from './layout.module.scss';
+import Layout from './Layout';
 
 function App() {
   return (
-    <header className={styles.layout}>
+    <Layout>
       <Header />
-    </header>
+    </Layout>
   );
 }
 
