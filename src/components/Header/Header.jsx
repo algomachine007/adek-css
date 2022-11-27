@@ -53,11 +53,12 @@ const Header = ({ buttonHeader, contactHeader, headerLinks }) => {
 
       {menu && (
         <nav className={styles.navOpen}>
+          {/* TODO : update based on design*/}
           <ul>
-            <li>One</li>
-            <li>One</li>
-            <li>One</li>
-            <li>One</li>
+            <li>Menu item one</li>
+            <li>Menu item two</li>
+            <li>Menu item three</li>
+            <li>Menu item four</li>
           </ul>
         </nav>
       )}
