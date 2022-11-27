@@ -27,19 +27,13 @@ const Header = () => {
                 <p> {title} </p>
                 <IconComponent name={icon} />
               </span>
-              {subLinks &&
-                subLinks.map(({ title, href }, index) => (
-                  <Dropdown link={title} url={href} />
+              <div className={styles.dropdown}>
+                {subLinks?.map(({ title, href }, index) => (
+                  <Dropdown key={`sub-${index}`} link={title} url={href} />
                 ))}
+              </div>
             </li>
           ))}
-          <li>
-            <span>
-              <p> Products </p>
-              <IconComponent name='chevron' />
-            </span>
-            <Dropdown />
-          </li>
         </ul>
 
         <button className={styles.button}>Contact Us</button>
