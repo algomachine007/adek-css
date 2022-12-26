@@ -1,0 +1,3 @@
+This component renders the Header elements i.e Dropdown and Hamburger menu items. It utilizes a toggle function which controls hide or show state for the menu items.
+
+Behavior: When the menu receives data, it renders information and links each navigation item such as services, product and company. Items that do not possess sub links do not have a dropdown.
