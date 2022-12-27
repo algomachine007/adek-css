@@ -1,5 +1,5 @@
-@use "./../../styles/config/variables" as variable;
-@use "./../../styles/config/mixins" as mixin;
+@use "./../../../styles/config/variables" as variable;
+@use "./../../../styles/config/mixins" as mixin;
 
 .wrapper {
   /* display and visibility */
@@ -63,44 +63,6 @@
         }
       }
     }
-  }
-}
-
-.topNav {
-  /* display and visibility */
-  display: none;
-  justify-content: flex-end;
-
-  /* box-model */
-  margin: 30px 0;
-
-  li {
-    span {
-      /* display and visibility */
-      display: flex;
-      align-items: center;
-
-      a {
-        /* typography */
-        text-decoration: none;
-        color: variable.$black-primary;
-      }
-
-      img {
-        /* box-model */
-        margin-right: 18px;
-      }
-    }
-  }
-
-  li:first-child {
-    /* box-model */
-    margin: 0 35px;
-  }
-
-  @media #{variable.$xsmall-and-up} {
-    /* display and visibility */
-    display: flex;
   }
 }
 
