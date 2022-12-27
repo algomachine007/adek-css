@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import IconComponent from '../../Icons';
+import Button from '../Button/Button';
 import Dropdown from '../HeaderElements/Dropdown/Dropdown';
 import { Hamburger } from '../HeaderElements/Hamburger/Hamburger';
 
@@ -41,7 +42,7 @@ const Header = ({ buttonHeader, contactHeader, headerLinks }) => {
           ))}
         </ul>
 
-        <button className={styles.button}>{buttonHeader.title}</button>
+        <Button className={styles.button} title={buttonHeader.title} />
 
         <div className={styles.hamburger}>
           <Hamburger

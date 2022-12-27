@@ -1,0 +1,22 @@
+@use "./../../styles/config/variables" as variable;
+@use "./../../styles/config/mixins" as mixin;
+
+.button {
+  /* display and visibility */
+  @include mixin.headerBtn;
+
+  @media screen and (min-width: 368px) {
+    /* box-model */
+    padding: 0.5px 45px;
+  }
+
+  @media #{variable.$md-tablet-and-up} {
+    margin: 0;
+  }
+
+  &:hover {
+    /* display and visibility */
+    background: variable.$wine-primary;
+    color: variable.$white;
+  }
+}
