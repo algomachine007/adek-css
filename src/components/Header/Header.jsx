@@ -4,7 +4,6 @@ const Header = ({ topNavigation, children }) => {
   return (
     <header>
       {topNavigation}
-
       {children}
     </header>
   );
