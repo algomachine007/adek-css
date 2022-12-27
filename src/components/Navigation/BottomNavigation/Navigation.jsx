@@ -44,7 +44,7 @@ const Navigation = ({ buttonHeader, headerLinks }) => {
 
       {menu && (
         <nav className={styles.navOpen}>
-          {/* TODO : update based on design*/}
+          {/* TODO : update based on design. In the mobile version, there would be an arrow with dropdown which would house the subLinks*/}
           <ul>
             <li>Menu item one</li>
             <li>Menu item two</li>
